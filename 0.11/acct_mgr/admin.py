@@ -363,7 +363,7 @@ class AccountManagerAdminPanel(CommonTemplateProvider):
                                 len(e.msg_args) == len(re.findall('%s',
                                                                   message)):
                             message = message % e.msg_args
-                        data['editor_error'] = Markup(message)
+                        data['editor_error'] = e
                 else:
                     data['editor_error'] = _(
                         "The password store does not support creating users.")
